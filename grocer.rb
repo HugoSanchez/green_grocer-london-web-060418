@@ -1,27 +1,21 @@
 require "pry"
 
-def add_attribute_to_hash(cart_hash, attribute, values)
-  if cart_hash[attribute]
-    cart_hash[attribute] << value
-  else
-    cart_hash[attribute] = []
-    cart_hash[attribute] << value.to_s
-  end
-end
-
 def consolidate_cart(cart)
- 
-  consolidated_cart = Hash.new
-  
-  cart.uniq.each do |item, attributes|
-    attributes.each do |attribute, values|
-    if consolidated_cart[item]
-      add_attribute_to_hash(consolidated_cart(item), attributes, values)
-    else consolidated_cart[item] = {}
-      add_attribute_to_hash(consolidated_cart(item), attributes, values)
+
+  consolidated_cart = {}
+
+  cart.each_with_index do |item, i|
+    item.each do |key, value|
+      if consolidated_cart[key]
+        consolidated_cart[key][:count] += 1
+      else
+        consolidated_cart[key] = value
+        consolidated_cart[:count] = 1
+
       end
     end
   end
+  puts consolidated_cart
 end
       
 
