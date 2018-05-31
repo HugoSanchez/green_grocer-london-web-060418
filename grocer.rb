@@ -13,7 +13,7 @@ def consolidate_cart(cart)
  
   consolidated_cart = Hash.new
   
-  cart.uniq.each {|item|
+  cart.uniq.each {|item, values|
     puts item
     end
 end
