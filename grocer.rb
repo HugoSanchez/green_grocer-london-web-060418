@@ -9,8 +9,8 @@ def consolidate_cart(cart)
       consolidated_cart << values
       
     end
+    binding.pry
   end
-  binding.pry
 end
       
 
