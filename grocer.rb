@@ -4,7 +4,7 @@ def consolidate_cart(cart)
  
   consolidated_cart = Hash.new
   
-  cart.uniq.each do |item|
+  cart.uniq.each {|item|
     puts item
     end
 end
