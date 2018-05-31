@@ -3,10 +3,12 @@ require "pry"
 def consolidate_cart(cart)
  
   consolidated_cart = Hash.new
-  cart.uniq{|x| x.cart_item}
-      consolidated_cart = cart_item
+  
+  cart.uniq.each do |x|
+    if consolidated_cart[x]
+      consolidated_cart[x]
+    else consolidated_cart[x]
 
-      binding.pry
 end
       
 
