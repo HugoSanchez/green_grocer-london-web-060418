@@ -4,12 +4,13 @@ def consolidate_cart(cart)
 
   consolidated_cart = {}
 
-  cart.each do |item|
+  cart.each_with_index do |item|
     item.each do |key, value|
       if consolidated_cart.has_key?(key)
         consolidated_cart[key][:count] += 1
       else
-        consolidated_cart = consolidated_cart.merge({key => value.merge({count: 1})})
+        consolidated_cart[key] = value
+        consolidated_cart[key][:count] = 1
 
       end
     end
