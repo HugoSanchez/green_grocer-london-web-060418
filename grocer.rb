@@ -1,17 +1,21 @@
 require "pry"
+
 def consolidate_cart(cart)
- # code here	   # code here
-  con_hash = {}
-  cart.each do |item|
-    item.each do |name, attribute|
-      if con_hash.has_key?(name)
-        con_hash[name][:count] += 1        
-      else 
-        con_hash = con_hash.merge({name => attribute.merge({count: 1})})
+
+  consolidated_cart = {}
+
+  cart.each_with_index do |item|
+    item.each do |key, value|
+      if consolidated_cart.has_key?(key)
+        consolidated_cart[key][:count] += 1
+      else
+        consolidated_cart[key] = value
+        consolidated_cart[key][:count] = 1
+
       end
     end
   end
-  return con_hash
+  puts consolidated_cart
 end
     
 
