@@ -1,23 +1,20 @@
 require "pry"
 
-def consolidate_cart(cart)
-
-  consolidated_cart = {}
-
-  cart.each_with_index do |item, i|
-    item.each do |key, value|
-      if consolidated_cart[key]
-        consolidated_cart[key][:count] += 1
+def consolidate_cart(cart:[])
+  # code here	+  updated_cart = {}
+  cart.each do |item|
+    item.each do |k, v|
+      if !updated_cart[k]
+        updated_cart[k] = v
+        updated_cart[k][:count] = 1
       else
-        consolidated_cart[key] = value
-        consolidated_cart[:count] = 1
-
+        updated_cart[k][:count] += 1
       end
     end
   end
-  puts consolidated_cart
+  updated_cart
 end
-      
+    
 
 def apply_coupons(cart, coupons)
   # code here
