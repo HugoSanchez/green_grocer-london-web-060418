@@ -6,7 +6,6 @@ def consolidate_cart(cart)
   cart.uniq{|x| x.cart_item}
       consolidated_cart = cart_item
 
-  end
   binding.pry
 end
       
