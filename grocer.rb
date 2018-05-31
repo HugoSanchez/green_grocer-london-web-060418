@@ -7,7 +7,7 @@ def consolidate_cart(cart)
       consolidated_cart = cart_item
 
   end
-  #binding.pry
+  binding.pry
 end
       
 
