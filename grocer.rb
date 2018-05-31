@@ -1,5 +1,14 @@
 require "pry"
 
+def add_attribute_to_hash(cart_hash, attribute, values)
+  if cart_hash[attribute]
+    cart_hash[attribute] << value
+  else
+    cart_hash[attribute] = []
+    cart_hash[attribute] << value.to_s
+  end
+end
+
 def consolidate_cart(cart)
  
   consolidated_cart = Hash.new
