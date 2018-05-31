@@ -1,6 +1,6 @@
 require "pry"
 
-def consolidate_cart(cart:[])
+def consolidate_cart(cart)
 
   consolidated_cart = {}
 
