@@ -15,9 +15,9 @@ def consolidate_cart(cart)
   
   cart.uniq.each {|item, values|
     if consolidated_cart[item]
-      add_attribute_to_hash(consolidated_cart[item] values)
+      add_attribute_to_hash(consolidated_cart[item], values)
     else consolidated_cart[item] = {}
-      consolidated_cart
+      add_attribute_to_hash(consolidated_cart(item), values)
     end
 end
       
