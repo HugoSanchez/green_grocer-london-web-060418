@@ -1,5 +1,5 @@
 require "pry"
-def consolidate_cart(cart:[])
+def consolidate_cart(cart)
  # code here	   # code here
   con_hash = {}
   cart.each do |item|
