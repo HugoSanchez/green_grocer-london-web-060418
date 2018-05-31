@@ -4,9 +4,9 @@ def consolidate_cart(cart)
  
   consolidated_cart = Hash.new
   
-  cart.uniq.each do |x|
-    if consolidated_cart[x]
-      consolidated_cart[x]
+  cart.uniq.each do |item|
+    if consolidated_cart[item]
+      consolidated_cart[x][:count] = cart.unique.count
     else consolidated_cart[x]
     end
   end
