@@ -3,7 +3,7 @@ require "pry"
 def consolidate_cart(cart)
  
   consolidated_cart = Hash.new
-  cart.each do |item, values|
+  cart.uniq{|x| x.cart_item}
     if consolidated_cart[item]
       consolidated_cart = item
     else consolidated_cart[item] = {}
