@@ -14,7 +14,7 @@ def consolidate_cart(cart)
   consolidated_cart = Hash.new
   
   cart.uniq.each do |item, attributes|
-    attributes.each do |attribute, values]
+    attributes.each do |attribute, values|
     if consolidated_cart[item]
       add_attribute_to_hash(consolidated_cart(item), attributes, values)
     else consolidated_cart[item] = {}
