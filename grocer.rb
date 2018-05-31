@@ -6,7 +6,7 @@ def consolidate_cart(cart)
   
   cart.uniq.each do |item|
     if consolidated_cart[item]
-      consolidated_cart[x][:count] = cart.count
+      consolidated_cart[x][:count] = cart.each {|name| name.count
     else consolidated_cart[x]
     end
   end
