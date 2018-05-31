@@ -9,8 +9,7 @@ def consolidate_cart(cart:[])
       if consolidated_cart.has_key?(key)
         consolidated_cart[key][:count] += 1
       else
-        consolidated_cart[key] = value
-        consolidated_cart[key][:count] = 1
+        consolidated_cart = consolidated_cart.merge({key => value.merge({count: 1})})
 
       end
     end
