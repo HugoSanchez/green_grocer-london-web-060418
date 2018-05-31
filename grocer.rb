@@ -18,7 +18,7 @@ def consolidate_cart(cart)
     if consolidated_cart[item]
       add_attribute_to_hash(consolidated_cart(item), attributes, values)
     else consolidated_cart[item] = {}
-      add_attribute_to_hash(consolidated_cart(item), attributes values)
+      add_attribute_to_hash(consolidated_cart(item), attributes, values)
       end
     end
   end
