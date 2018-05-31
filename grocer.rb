@@ -7,7 +7,6 @@ def consolidate_cart(cart)
   cart.uniq.each do |item|
     puts item
     end
-  end
   binding.pry
 end
       
