@@ -8,7 +8,8 @@ def consolidate_cart(cart)
     if consolidated_cart[x]
       consolidated_cart[x]
     else consolidated_cart[x]
-
+    end
+  end
 end
       
 
